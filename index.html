@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Popup</title>
+		<link rel="stylesheet" href="public/css/SHKpopup.css">
+	</head>
+	<style type="text/css">
+		body {
+			background: #b14b75;
+		}
+		.buttons {
+			background: #a03c65;
+			border-radius: 5px;
+			position: absolute;
+			display: table;
+			margin: auto;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			top: 0;
+			width: auto;
+			height: auto;
+			max-width: 400px;
+			min-height: 20px;
+
+		}
+		button{
+			background: #cea01f;
+			border-radius: 5px;
+			padding: 11px 18px;
+			cursor: pointer;
+			outline: none;
+			border: none;
+		}
+		.buttons button{
+			margin: 10px;
+		}
+	</style>
+	<body>
+
+		<div class="buttons">
+			<button id="dialog" onclick="getPopup('dialog')">Popup Dialog</button>
+			<button id="form"   onclick="getPopup('form')">Popup Form</button>
+			<button id="page"   onclick="getPopup('page')">Popup Page</button>
+		</div>
+
+		<div class="backPopup" onclick="closePopup()"></div>
+
+		<div class="popupBox" data-popup="dialog">
+			<div class="popupHeader">
+				<span class="popupTitle">Dialog popup</span>
+				<button class="popupCloseBtn" title="Close to ESC" onclick="closePopup()">Close</button>
+			</div>
+			<div class="popupContent">
+				<p class="popupDialog">
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+				</p>
+			</div>
+		</div>
+		<div class="popupBox" data-popup="form">
+			<div class="popupHeader">
+				<span class="popupTitle">Form popup</span>
+				<button class="popupCloseBtn" title="Close to ESC" onclick="closePopup()">Close</button>
+			</div>
+			<div class="popupContent">
+				<form>
+					<input type="text" name="name" placeholder="Username" autocomplete="off">
+					<input type="password" name="passw" placeholder="Password" autocomplete="off">
+					<button>Log in</button>
+				</form>
+			</div>
+		</div>
+		<div class="popupBox" data-popup="page">
+			<div class="popupHeader">
+				<span class="popupTitle">Page popup</span>
+				<button class="popupCloseBtn" title="Close to ESC" onclick="closePopup()">Close</button>
+			</div>
+			<div class="popupContent">
+				<p class="popupDialog">
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown <a href="#">printer</a> took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+					<h3>List item</h3>
+					<ul>
+						<li>BMW</li>
+						<li>Volvo</li>
+						<li>Ford</li>
+					</ul>
+
+				</p>
+			</div>
+		</div>
+
+	<script src="public/jquery/jquery-3.4.1.min.js"></script>
+	<script src="public/js/SHKpopup.js"></script>
+
+	<script type="text/javascript">
+	  //Auto load popup data-popup
+	  Popup("page", false);
+	</script>
+
+	</body>
+</html>
