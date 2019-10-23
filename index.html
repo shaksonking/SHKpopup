@@ -2,106 +2,104 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Popup</title>
-		<meta name="viewport" content="initial-scale=1, minimal-ui" />
-		<link rel="stylesheet" href="public/css/SHKpopup.css">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>Home page</title>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="public/css/main.css">
+		<link rel="stylesheet" href="public/import/font-awesome/css/all.css">
 	</head>
-	<style type="text/css">
-		body {
-			background: #b14b75;
-		}
-		.buttons {
-			background: #a03c65;
-			border-radius: 5px;
-			position: absolute;
-			display: table;
-			margin: auto;
-			bottom: 0;
-			right: 0;
-			left: 0;
-			top: 0;
-			width: auto;
-			height: auto;
-			max-width: 400px;
-			min-height: 20px;
-
-		}
-		button{
-			background: #cea01f;
-			border-radius: 5px;
-			padding: 11px 18px;
-			cursor: pointer;
-			outline: none;
-			border: none;
-		}
-		.buttons button{
-			margin: 10px;
-		}
-	</style>
 	<body>
 
-		<div class="header">
-			<a href="#">SHKpopup</a>
-		</div>
+		<div class="main_content">
+			<div class="side_menu">
+				<ul class="menu_items">
+					<li><a href="#" class="active"><i class="material-icons">home</i>Home</a></li>
+					<li><a href="#"><i class="material-icons">settings_applications</i>Services</a></li>
+					<li><a href="#"><i class="material-icons" style="color: #2cb300;">check_circle_outline</i>Projects</a></li>
+					<li><a href="#"><i class="material-icons">email</i>Contact</a></li>
+				</ul>
+			</div>
+			<div class="side_content">
+				<div class="mauto p-10">
+					<div class="site_header flex">
+					 	<div class="site_logo">
+					 		<a href="#"><img src="public/images/logotype.png" width="200px"></a>	
+					 	</div>
+				 		<div class="header_nav">
+				 			<ul class="flex">
+				 				<li><i class="material-icons">phone</i> +38 095 82 40 299</li>
+				 				<li><i class="material-icons">email</i> ebalrot@mail.ru</li>
+				 				<li><a href="#"><i class="fab fa-telegram"></i></a></li>
+				 				<li><a href="#"><i class="fab fa-viber"></i></a></li>
+				 				<li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+				 			</ul>
+				 		</div>
+					</div>
 
-		<div class="buttons">
-			<button id="dialog" onclick="getPopup('dialog')">Popup Dialog</button>
-			<button id="form"   onclick="getPopup('form')">Popup Form</button>
-			<button id="page"   onclick="getPopup('page')">Popup Page</button>
-		</div>
+					<div class="caption">
+						<span>Какие задачи мы решаем</span>
+					</div>
 
-		<div class="backPopup" onclick="closePopup()"></div>
+					<div class="tab-nav-container" style="margin: 50px 0 30px 0;">
+						<ul class="tab-nav flex">
+							<li><a href="#" data-tabid="1" class="active"><span>01</span> Упаковка бизнеса</a></li>	
+							<li><a href="#" data-tabid="2"><span>02</span> Рост конверсии</a></li>	
+							<li><a href="#" data-tabid="3"><span>03</span> Индивидуальный</a></li>	
+						</ul>
+					</div>
 
-		<div class="popupBox" data-popup="dialog">
-			<div class="popupHeader">
-				<span class="popupTitle">Dialog popup</span>
-				<button class="popupCloseBtn" title="Close to ESC" onclick="closePopup()">Close</button>
-			</div>
-			<div class="popupContent">
-				<p class="popupDialog">
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-				</p>
-			</div>
-		</div>
-		<div class="popupBox" data-popup="form">
-			<div class="popupHeader">
-				<span class="popupTitle">Form popup</span>
-				<button class="popupCloseBtn" title="Close to ESC" onclick="closePopup()">Close</button>
-			</div>
-			<div class="popupContent">
-				<form>
-					<input type="text" name="name" placeholder="Username" autocomplete="off">
-					<input type="password" name="passw" placeholder="Password" autocomplete="off">
-					<button>Log in</button>
-				</form>
-			</div>
-		</div>
-		<div class="popupBox" data-popup="page">
-			<div class="popupHeader">
-				<span class="popupTitle">Page popup</span>
-				<button class="popupCloseBtn" title="Close to ESC" onclick="closePopup()">Close</button>
-			</div>
-			<div class="popupContent">
-				<p class="popupDialog">
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown <a href="#">printer</a> took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-					<h3>List item</h3>
-					<ul>
-						<li>BMW</li>
-						<li>Volvo</li>
-						<li>Ford</li>
-					</ul>
+					<div class="tab-container" id="tab-container">
+						<div class="tab-content active p-20" data-contentid="1" id="tabcontent-1">
+							<div class="tab-bar-left">
+								<img src="public/images/packing.png" width="300px">
+							</div>
+							<div class="tab-bar-right p-20">
+								<div class="tab-caption">
+									<p>
+										Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Первую большого запятой домах, силуэт страну. Предупредила ему, собрал продолжил!
+									</p>
+									<a href="#" class="btn btn-white">Получить консультацию</a>
+								</div>
+							</div>
+						</div>
+						<div class="tab-content p-20" data-contentid="2" id="tabcontent-2">
+							<div class="tab-bar-left">
+								<img src="public/images/conversion.png" width="300px">
+							</div>
+							<div class="tab-bar-right p-20">
+								<div class="tab-caption">
+									<p>
+										Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Первую большого запятой домах, силуэт страну. Предупредила ему, собрал продолжил!
+									</p>
+									<a href="#" class="btn btn-white">Получить консультацию</a>
+								</div>
+							</div>
+						</div>
+						<div class="tab-content p-20" data-contentid="3" id="tabcontent-3">
+							<div class="tab-bar-left">
+								<img src="public/images/design.png" width="300px">
+							</div>
+							<div class="tab-bar-right p-20">
+								<div class="tab-caption">
+									<p>
+										Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Первую большого запятой домах, силуэт страну. Предупредила ему, собрал продолжил!
+									</p>
+									<a href="#" class="btn btn-white">Получить консультацию</a>
+								</div>
+							</div>
+						</div>
+					</div>
 
-				</p>
+					<div class="caption">
+						<span>Услуги</span>
+					</div>
+
+				</div>
 			</div>
 		</div>
 
 	<script src="public/jquery/jquery-3.4.1.min.js"></script>
-	<script src="public/js/SHKpopup.js"></script>
-
-	<script type="text/javascript">
-	  //Auto load popup data-popup
-	  Popup("page", false);
-	</script>
-
+	<script src="public/js/main.js"></script>
 	</body>
-</html>//shaksonking.github.io/SHKpopup/
+</html>
