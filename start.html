@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Popup</title>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="//shaksonking.github.io/SHKpopup/public/css/SHKpopup.css">
+		<link rel="stylesheet" href="//shaksonking.github.io/SHKpopup/public/css/prism.css">
+	</head>
+	<style type="text/css">
+
+		/*font-family: 'Roboto', sans-serif;
+		font-family: 'Open Sans', sans-serif;
+		font-family: 'Montserrat', sans-serif;*/
+
+		body {
+			background: #b14b75;
+			font-family: 'Open Sans', sans-serif;
+		}
+		.instructation {
+			font-size: 12px;
+			color: #fff;
+		}
+		.content {
+			/*background: #a03c65;*/
+			border-radius: 5px;
+			position: absolute;
+			display: table;
+			margin: auto;
+			right: 0;
+			left: 0;
+			top: 150px;
+			width: auto;
+			height: auto;
+			max-width: 600px;
+			min-height: 20px;
+		}
+		button{
+			background: transparent;
+			border-radius: 5px;
+			padding: 11px 18px;
+			cursor: pointer;
+			font-size: 16px;
+			outline: none;
+			border: 2px solid #fff;
+			color: #fff;
+			font-weight: bold;
+		}
+		.beta {
+		    position: absolute;
+		    right: 40px;
+		    top: 0;
+		    line-height: 50px;
+		    font-size: 11px;
+		    text-transform: uppercase;
+		    color: #adadad;
+		}
+		.content button{
+			margin: 10px;
+		}
+		.popupContent button {
+			border: 2px solid #b14b75;
+			color: #b14b75;
+		}
+		.popupContent input {
+			outline: none;
+			border: none;
+			border-bottom: 2px solid #b14b75;
+		}
+		.header {
+			position: relative;
+			display: block;
+			height: 50px;
+			background: #fff;
+		}
+		.header .logotype {
+			float: left;
+			padding: 3px 40px;
+		}
+		.header .logotype a{
+			text-decoration: none;
+			font-size: 30px;
+			color: #b14b75;
+		}
+		.top-nav ul{
+			list-style: none;
+			display: flex;
+		}
+		.top-nav ul > li a{
+			display: block;
+			text-decoration: none;
+			padding: 15px;
+			color: #000;
+		}
+		.top-nav ul > li a.active,
+		.top-nav ul > li a:hover{
+			color: #b14b75;
+		}
+		.content .content-footer {
+			display: block;
+			margin: 50px 20px;
+			text-align: center;
+			font-size: 12px;
+			color: #fff;
+		}
+		.content .content-footer a{
+			color: #fff;
+			text-decoration: none;
+			border-bottom: 1px dashed #fff;
+		}
+		.content h3 {
+			text-align: center;
+			font-size: 40px;
+			color: #fff;
+			text-transform: uppercase;
+		}
+		.content h5 {
+			font-weight: normal;
+			text-align: center;
+			padding: 10px;
+			color: #fff;
+		}
+		.btn-outgroup {
+			display: table;
+			margin: 30px auto;
+		}
+		.material-icons {
+			line-height: inherit;
+		}
+		:not(pre) > code[class*="language-"], pre[class*="language-"] {
+		    background: #e0fbff;
+		    border: 3px solid #823957;
+			max-width: 600px;
+		}
+	</style>
+	<body>
+
+		<div class="header">
+			<div class="logotype">
+				<a href="https://shaksonking.github.io/SHKpopup/"><b>{SHK}</b>popup</a>
+			</div>
+			<div class="top-nav">
+				<ul>
+					<li><a href="https://shaksonking.github.io/SHKpopup/start.html" class="active">Getting Started</a></li>
+					<li><a href="https://github.com/shaksonking/SHKpopup/archive/master.zip">Download</a></li>
+					<li><a href="https://github.com/shaksonking/SHKpopup" target="_blank">Github</a></li>
+				</ul>
+			</div>
+			<div class="beta">
+				beta 1.0.0
+			</div>
+		</div>
+
+		<div class="content">
+
+			<h3>Getting Started</h3>
+			<h5>Set up your HTML markup.</h5>
+
+			<br/>
+			<br/>
+
+			<span class="instructation">1. Copy-paste the stylesheet <span style="color: #8edcfd;">[link]</span> into your <span style="color: #8edcfd;">[head]</span> before all other stylesheets to load our CSS.</span><pre class=" language-markup"><code class="  language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>//shaksonking.github.io/SHKpopup/public/css/SHKpopup.min.css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span></code></pre>
+
+			<br/>
+			<br/>
+
+			<span class="instructation">2. Copy-paste the javascript <span style="color: #8edcfd;">[body]</span> into your <span style="color: #8edcfd;">[body]</span> before all other javascript to load our JS.</span>
+			<pre class=" language-markup"><code class="  language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>//shaksonking.github.io/SHKpopup/public/js/SHKpopup.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+			<br/>
+			<br/>
+
+			<span class="instructation">3. Insert this <span style="color: #8edcfd;">[TAG]</span> back body <i>(Popup back)</i> </span>
+			<pre class=" language-markup"><code class="  language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>backPopup<span class="token punctuation">"</span></span> <span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>closePopup()<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+			<br/>
+			<br/>
+
+			<span class="instructation">4. Insert button <span  style="color: #8edcfd;">[id="dialog" onclick="getPopup('dialog')"]</span></span>
+			<pre class=" language-markup"><code class="  language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dialog<span class="token punctuation">"</span></span> <span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>getPopup('dialog')<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Popup Dialog<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+			<br/>
+			<br/>
+
+
+			<span class="instructation">3. Insert this <span style="color: #8edcfd;">[TAGS]</span> in your content and choose your Popup > [data-popup="<span style="color: #8edcfd;">dialog</span>"]</span>
+	<pre class=" language-markup"><code class="  language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>popupBox<span class="token punctuation">"</span></span> <span class="token attr-name">data-popup</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dialog<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>popupHeader<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>popupTitle<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Dialog<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>popupCloseBtn<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Close to ESC<span class="token punctuation">"</span></span> <span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>closePopup()<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>material-icons<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>close<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>popupContent<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>popupDialog<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+			<div class="content-footer">
+				By <a href="https://www.instagram.com/shakson_king/" target="_blank">@ShaksonKing</a>
+			</div>
+
+		</div>
+
+
+	<script src="//shaksonking.github.io/SHKpopup/public/jquery/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="//shaksonking.github.io/SHKpopup/public/js/prism.js"></script>
+
+	</body>
+</html>
